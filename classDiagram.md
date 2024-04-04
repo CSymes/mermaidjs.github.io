@@ -123,7 +123,7 @@ There are two ways to define the members of a class, and regardless of the which
   BankAccount : +withdrawl(amount)
   ```
   ```mermaid
-    classDiagram
+classDiagram
     class BankAccount
     BankAccount : +String onwer
     BankAccount : +BigDecimal balance
@@ -141,13 +141,14 @@ class BankAccount{
 }
 ```
 ```mermaid
-    classDiagram
+classDiagram
     class BankAccount{
         +String onwer
         +BigDecimal balance
         +deposit(amount)
         +withdrawl(amount)
-}```
+}
+```
 
 ## Defining Relationship
 A relationship is a general term covering the specific types of logical connections found on class and object diagrams. 
@@ -168,48 +169,47 @@ o--  | Aggregation
 <!--- TODO ..>  Dependency--->
 ```
 classDiagram
-classA <|-- classB
-classC *-- classD
-classE o-- classF
-classG <-- classH
-classI <.. classJ
-classK .. classL
+    classA <|-- classB
+    classC *-- classD
+    classE o-- classF
+    classG <-- classH
+    classI <.. classJ
+    classK .. classL
 
 ```
 
 ```mermaid
 classDiagram
-classA <|-- classB
-classC *-- classD
-classE o-- classF
-classG <-- classH
-classI <.. classJ
-classK .. classL
+    classA <|-- classB
+    classC *-- classD
+    classE o-- classF
+    classG <-- classH
+    classI <.. classJ
+    classK .. classL
 
 ```
 We can use the arrowheads in opposite directions as well :
 ```
 classDiagram
-classA --|> classB
-classC --* classD
-classE --o classF
-classG <--> classH
-classI ..> classJ
-classK .. classL
-
+    classA --|> classB
+    classC --* classD
+    classE --o classF
+    classG <--> classH
+    classI ..> classJ
+    classK .. classL
 ```
 
 ```mermaid
 classDiagram
-classA --|> classB
-classC --* classD
-classE --o classF
-classG <--> classH
-classI ..> classJ
-classK .. classL
-
-
+    classA --|> classB
+    classC --* classD
+    classE --o classF
+    classG <--> classH
+    classI ..> classJ
+    classK .. classL
 ```
+
+
 ## Labels on Relations 
 
 It is possible to add a label text to a relation:
@@ -218,14 +218,14 @@ It is possible to add a label text to a relation:
 ```
 ```
 classDiagram
-classA <|-- classB : implements
-classC *-- classD : composition
-classE o-- classF : association
+    classA <|-- classB : implements
+    classC *-- classD : composition
+    classE o-- classF : association
 ```
 ```mermaid
 classDiagram
-classA <|-- classB : implements
-classE o-- classF : association
+    classA <|-- classB : implements
+    classE o-- classF : association
 
 ```
 ## Cardinality / Multiplicity on relations
@@ -271,52 +271,51 @@ Annotations are defined within the opening `<<` and closing `>>`. There are two 
 - In a ***separate line*** after a class is defined. For example:
 ```
 classDiagram
-class Shape
-<<interface>> Shape
+    class Shape
+    <<interface>> Shape
 ```
 
 ```mermaid
 classDiagram
-class Shape
-<<interface>> Shape
-Shape : noOfVertices
-Shape : draw()
+    class Shape
+    <<interface>> Shape
+    Shape : noOfVertices
+    Shape : draw()
 ```
 - In a ***nested structure*** along with class definition. For example:
 
 ```
 classDiagram
-class Shape{
-    <<interface>>
-    noOfVertices
-    draw()
-}
-class Color{
-    <<enumeration>>
-    RED
-    BLUE
-    GREEN
-    WHITE
-    BLACK
-}
-
+    class Shape{
+        <<interface>>
+        noOfVertices
+        draw()
+    }
+    class Color{
+        <<enumeration>>
+        RED
+        BLUE
+        GREEN
+        WHITE
+        BLACK
+    }
 ```
 
 ```mermaid
 classDiagram
-class Shape{
-    <<interface>>
-    noOfVertices
-    draw()
-}
-class Color{
-    <<enumeration>>
-    RED
-    BLUE
-    GREEN
-    WHITE
-    BLACK
-}
+    class Shape{
+        <<interface>>
+        noOfVertices
+        draw()
+    }
+    class Color{
+        <<enumeration>>
+        RED
+        BLUE
+        GREEN
+        WHITE
+        BLACK
+    }
 ```
 
 
